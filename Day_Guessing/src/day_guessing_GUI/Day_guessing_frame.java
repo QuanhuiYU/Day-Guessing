@@ -99,7 +99,7 @@ public class Day_guessing_frame extends JFrame {
 		lblNewLabel.setBounds(153, 23, 405, 134);
 		contentPane.add(lblNewLabel);
 		
-		System.out.print(day.get(selector)+ date.get(selector)+answer);
+		
 		
 		
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

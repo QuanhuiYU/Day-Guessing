@@ -19,30 +19,25 @@ public class randomSelector {
 	}
 	
 	//define the answer where Monday is = 1, Tuesday = 2 ... Sunday = 7
-	public int score(Vector<String> vector,int selector) {
-		int answer;
-		if (vector.get(selector)== "Monday") {
-			answer = 1;
-		}
-		else if (vector.get(selector)=="Tuesday") {
-			answer = 2;
-		}
-		else if (vector.get(selector)=="Wednesday") {
-			answer = 3;
-		}
-		else if (vector.get(selector)=="Thursday") {
-			answer = 4;
-		}
-		else if (vector.get(selector)=="Friday") {
-			answer = 5;
-		}
-		else if (vector.get(selector)=="Saturday") {
-			answer = 6;
-		}
-		
-		else {
-			answer = 7;
-		}
-		return answer;
+	public int score(Vector<String> vector, int selector) {
+	    int answer;
+	    String day = vector.get(selector);
+	    if (day.equals(" Monday")) {
+	        answer = 1;
+	    } else if (day.equals(" Tuesday")) {
+	        answer = 2;
+	    } else if (day.equals(" Wednesday")) {
+	        answer = 3;
+	    } else if (day.equals(" Thursday")) {
+	        answer = 4;
+	    } else if (day.equals(" Friday")) {
+	        answer = 5;
+	    } else if (day.equals(" Saturday")) {
+	        answer = 6;
+	    } else {
+	        answer = 7;
+	    }
+	    return answer;
 	}
+
 }
