@@ -4,6 +4,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import randomSelector.randomSelector;
+
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
@@ -19,7 +22,7 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 import javax.swing.border.EmptyBorder;
 import javax.swing.*;
-import java.util.Random;
+
 
 
 
@@ -86,15 +89,20 @@ public class Day_guessing_frame extends JFrame {
         }
 
 	    //Generate random selector
-        Random rand = new Random();
-		int selector = rand.nextInt(title.size());
-
-		
-		JLabel lblNewLabel = new JLabel(title.get(selector));
-		lblNewLabel.setBounds(153, 23, 405, 78);
+        int selector;
+        randomSelector rand = new randomSelector();
+		selector = rand.random(title);
+		//define the answer
+        int answer = rand.score(day, selector);
+		//Output the description and date
+		JLabel lblNewLabel = new JLabel("<html>" + title.get(selector) + "<br>" + date.get(selector) + "</html>");
+		lblNewLabel.setBounds(153, 23, 405, 134);
 		contentPane.add(lblNewLabel);
 		
+		System.out.print(day.get(selector)+ date.get(selector)+answer);
 		
+		
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		
 		
 		
@@ -109,30 +117,59 @@ public class Day_guessing_frame extends JFrame {
 		
 		
 		JButton btnNewButton_1 = new JButton("Tuesday");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_1.setBounds(170, 167, 100, 21);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Wednesday");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_2.setBounds(280, 167, 100, 21);
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Thrusday");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_3.setBounds(396, 167, 100, 21);
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_4 = new JButton("Friday");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_4.setBounds(503, 167, 100, 21);
 		contentPane.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("Satarday");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_5.setBounds(60, 213, 100, 21);
 		contentPane.add(btnNewButton_5);
 		
 		JButton btnNewButton_6 = new JButton("Sunday");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_6.setBounds(170, 213, 100, 21);
 		contentPane.add(btnNewButton_6);
 		
 		JButton btnNewButton_5_1 = new JButton("Start New");
+		btnNewButton_5_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		btnNewButton_5_1.setBounds(60, 282, 141, 21);
 		contentPane.add(btnNewButton_5_1);
 	}
