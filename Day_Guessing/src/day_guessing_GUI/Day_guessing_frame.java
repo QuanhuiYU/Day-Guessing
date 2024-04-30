@@ -78,9 +78,7 @@ public class Day_guessing_frame extends JFrame {
 		
 		
 		
-		// Function: Import events
-		// Create by Quanhui Yu
-		// Date: 04/27/2024
+		
         String filePath = "src/files_folder/Events.txt";
         Vector<String> title = new Vector<>();  //declare string vector to store the title
         Vector<String> date = new Vector<>();  //declare string vector to store the month/day/year
