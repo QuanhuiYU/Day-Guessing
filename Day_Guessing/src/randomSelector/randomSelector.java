@@ -3,9 +3,7 @@ import java.util.Random;
 import java.util.Vector;
 
 
-// Function: Random integer generator
-// Create by Quanhui Yu
-// Date: 04/28/2024
+
 
 
 
